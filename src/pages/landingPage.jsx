@@ -73,7 +73,7 @@ const LandingPage = () => {
         <div className="position-absolute text-center carousel-header-container">
           <div className="text-white fw-bold">
             <h3>Welcome</h3>
-            <h1 className=" text-uppercase">Your coffee ready to serve <br /> You want a order coffee ?</h1>
+            <h1 className=" text-uppercase custom-font">Your coffee ready to serve <br /> You want a order coffee ?</h1>
           </div>
           <div className="mt-5">
             <button className="btn p-3 text-white rounded me-4 navbar-button-primary">Order Now</button>
