@@ -27,7 +27,7 @@ img.carousel-image{
 div.carousel-header-container{
     top: 250px;
     z-index: 2; 
-    left: 15px;
+    left: 4.375rem;
 }
 
 div.carousel-header-container h3{
