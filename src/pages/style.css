@@ -1,5 +1,6 @@
 body {
     font-family: Helvetica;
+    font-size: 16px;
 }
 
 div.navbar-fixed{
@@ -42,6 +43,9 @@ button.btn-view-menu{
 }
 
 @media (min-width: 768px) {
+    body{
+        font-size: 18px;
+    }
     div.carousel-header-container{
         left: 12rem;
     }
