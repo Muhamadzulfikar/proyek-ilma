@@ -46,10 +46,16 @@ button.btn-view-menu{
     font-size: 20px;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.875rem) {
     body{
         font-size: 18px;
     }
+    div.carousel-header-container{
+        left: 11.5625rem;
+    }
+}
+
+@media (min-width: 48rem) {
     div.carousel-header-container{
         left: 12rem;
     }
@@ -76,4 +82,4 @@ button.btn-view-menu{
     div.carousel-header-container{
         left: 30rem;
     }
- }
+}
