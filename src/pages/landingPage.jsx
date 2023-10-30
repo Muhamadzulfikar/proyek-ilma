@@ -1,20 +1,39 @@
 import './style.css'
-// Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
-// Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import { useState } from "react";
+import { useEffect } from 'react';
+import OurProductLandingPage from '../sections/landingPages/ourProduct';
+import TaglineLandingPage from '../sections/landingPages/tagline';
+import Story from '../components/landingPages/story';
 
 const LandingPage = () => {
-  const [zIndex, setZIndex] = useState({ zIndex: 1, backgroundColor: "rgba(0, 0, 0, 0.515)" });
+  useEffect(() => {
+    const nextButton = document.getElementById('next');
+
+    if (nextButton) {
+      const intervalId = setInterval(() => {
+        nextButton.click();
+      }, 5000);
+
+      return () => clearInterval(intervalId);
+    }
+  }, []);
+
+  const burgerButtonClicked = () => {
+    const navContent = document.getElementById('navbarSupportedContent');
+    const navContainer = document.getElementById('navbar-container');
+    const buttonNavbar = document.getElementById('button-navbar');
+    navContent.classList.toggle('bg-coffee');
+    navContainer.classList.toggle('z-index-99');
+    buttonNavbar.classList.toggle('navbar-button-border');
+  }
+
   return (
     <section className="main-container bg-dark text-white">
       <div className=" position-relative">
-        <div style={zIndex} className={"navbar-fixed py-2 position-absolute bg-navbar"}>
+        <div id='navbar-container' className="navbar-fixed py-2 position-absolute">
           <nav className="navbar navbar-expand-lg container border-bottom border-1">
             <div className="container-fluid">
-              <a className="navbar-brand text-center text-md-start text-white" href="#"><h3>Coffee Shop</h3></a>
-              <button onClick={() => setZIndex({ zIndex: 3, backgroundColor: "rgba(0, 0, 0, 0.622)" })} className="navbar-toggler px-5 bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <a className="navbar-brand text-center text-md-start text-white" href="#"><h3>Saveurior Coffee</h3></a>
+              <button onClick={burgerButtonClicked} className="navbar-toggler bg-coffee" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,9 +50,9 @@ const LandingPage = () => {
                   <li className="nav-item me-md-5 me-0 ms-md-3 ms-0 mb-2 mb-md-0">
                     <a className="nav-link active text-white" aria-current="page" href="#">Contact</a>
                   </li>
-                  <li>
+                  <li className="nav-item mt-2 mt-md-0">
                     <form className="ms-md-5">
-                      <button className="btn navbar-button-primary text-white" type="submit">Shop Coffee</button>
+                      <button id='button-navbar' className="btn button-coffee text-white" type="submit">Shop Coffee</button>
                     </form>
                   </li>
                 </ul>
@@ -59,16 +78,15 @@ const LandingPage = () => {
               <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100 carousel-image" alt="..." />
             </div>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button className="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button id='next' className="carousel-control-next d-none" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-
 
         <div className="position-absolute text-center carousel-header-container">
           <div className="text-white fw-bold">
@@ -76,59 +94,27 @@ const LandingPage = () => {
             <h1 className=" text-uppercase custom-font">Your coffee ready to serve <br /> You want a order coffee ?</h1>
           </div>
           <div className="mt-5">
-            <button className="btn p-3 text-white rounded me-4 navbar-button-primary">Order Now</button>
-            <button className="btn p-3 text-white rounded btn-view-menu">View Menu</button>
+            <button className="btn px-3 py-2 text-white rounded me-4 button-coffee">Order Now</button>
+            <button className="btn px-3 py-2 text-white rounded btn-view-menu">View Menu</button>
           </div>
         </div>
       </div>
 
-      <div className="row w-100 mt-5 pt-4 pb-5">
-        <div className="col-md-6 ps-5 mb-md-5">
-          <h1 className='text-center'>Our Story</h1>
-          <p className='mt-5 lh-lg'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate iusto rem excepturi numquam dignissimos incidunt cumque commodi vel alias autem obcaecati quisquam corrupti accusantium debitis, ipsum dolorum eligendi, ad optio.
-            Consectetur laboriosam deleniti natus eum! Ad placeat unde vitae beatae totam doloribus corrupti! Explicabo repellendus ad architecto saepe tempore pariatur laborum molestias, placeat dolores nemo incidunt excepturi odio dolorem commodi.
-            Officiis ipsa optio perspiciatis sed veritatis est, voluptate exercitationem commodi pariatur omnis placeat nesciunt deleniti quae. Nulla consectetur eius quaerat reprehenderit, est ex! Dolore dignissimos libero voluptates reprehenderit distinctio quibusdam?</p>
-        </div>
-        <div className="col-md-6 ps-5 mt-3 mt-md-5 mt-lg-0 pt-md-5 pt-lg-0">
-          <img className='rounded' style={{ objectFit: "cover", height: "450px", width: "100%" }} src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-        </div>
-      </div>
+      <Story 
+        title="Kenapa Harus Saveurior Coffee"
+        content='Saveurior Coffee adalah pilihan utama bagi pecinta kopi yang menghargai kualitas dan rasa yang unggul. Nama "Saveurior" kami berasal dari kata "Saveur" dalam bahasa Perancis yang berarti rasa, digabung dengan akhiran "-ior" yang diambil dari kata "superior" dalam bahasa Indonesia, mencerminkan tekad kami untuk menjadi yang terbaik dalam dunia kopi. Kami berkomitmen untuk berdedikasi terhadap kualitas dalam pemilihan, pengolahan, dan penyajian kopi, kami akan memanjakan lidah Anda dengan setiap tegukan yang luar biasa.'
+        image="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
 
-      {/* <div className="row w-100 mt-md-5 ps-4 ps-md-5 ps-4 mt-5"></div> */}
+      <TaglineLandingPage />
 
-      <div className="row w-100 mt-md-5 mt-4 ps-4 ps-md-5 ps-4">
-        <h1 className='text-center mb-5'>Our Product</h1>
-        <div className="col-md-6 col-lg-4 rounded">
-          <button className="card bg-dark text-white p-0 pb-3 shadow mb-5" style={{border:0, textAlign:"left", height:"550px"}}>
-            <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="card-img-top" alt="..." />
-            <div className="card-body p-4">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-              <button className='btn btn-primary'>Order Now</button>
-            </div>
-          </button>
-        </div>
-        <div className="col-md-6 col-lg-4 rounded">
-          <button className="card bg-dark text-white p-0 pb-3 shadow mb-5" style={{border:0, textAlign:"left", height:"550px"}}>
-            <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="card-img-top" alt="..." />
-            <div className="card-body p-4">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-              <button className='btn btn-primary'>Order Now</button>
-            </div>
-          </button>
-        </div>
-        <div className="col-md-6 col-lg-4 rounded">
-          <button className="card bg-dark text-white p-0 pb-3 shadow mb-5" style={{border:0, textAlign:"left", height:"550px"}}>
-            <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="card-img-top" alt="..." />
-            <div className="card-body p-4">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-              <button className='btn btn-primary'>Order Now</button>
-            </div>
-          </button>
-        </div>
-      </div>
+      <Story 
+        title="Dari Pangalengan ke Cangkir Anda"
+        content='Kopi Saveurior berasal dari daerah Pangalengan yang mendunia akan kopi berkualitas. Kami teliti dalam pemilihan biji arabika terbaik, kemudian mengolahnya dengan metode fullwash demi mempertahankan kemurnian rasa kopi yang autentik. Kami dengan bangga menjunjung tinggi standar keaslian dengan menggunakan 100% kopi arabika murni tanpa campuran apa pun. Dengan begitu, Anda dapat merasakan kelezatan sejati kopi yang menjadi ciri khas dari daerah kami.'
+        image="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+
+      <OurProductLandingPage />
 
       <div className="row w-100 p-5 bg-dark text-white mt-5">
         <div className="col-md-4 ps-md-5">
