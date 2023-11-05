@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const CardLandingPage = ({ image, title, content }) => {
     return (
         <div className="col-md-6 col-lg-4 rounded">
@@ -6,7 +8,7 @@ const CardLandingPage = ({ image, title, content }) => {
                 <div className="card-body p-4">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text" style={{height:"80px"}}>{content}</p>
-                    <button className='btn button-coffee mt-3'>Order Now</button>
+                    <Link to={'https://wa.me/+6282229590440?text=Hallo%20saya%20ingin%20membeli%20produk%20' + title + '%20apakah%20produk%20masih%20tersedia?'} className='btn button-coffee mt-3'>Order Now</Link>
                 </div>
             </div>
         </div>

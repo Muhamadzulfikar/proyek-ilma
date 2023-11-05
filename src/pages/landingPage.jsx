@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import OurProductLandingPage from '../sections/landingPages/ourProduct';
 import TaglineLandingPage from '../sections/landingPages/tagline';
 import Story from '../components/landingPages/story';
+import StoryRight from '../components/landingPages/storyRight';
+import TeamContainer from '../sections/landingPages/teamContainer';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -27,28 +30,28 @@ const LandingPage = () => {
   }
 
   return (
-    <section className="main-container bg-dark text-white">
+    <section id='home' className="main-container bg-dark text-white">
       <div className=" position-relative">
         <div id='navbar-container' className="navbar-fixed py-2 position-absolute">
           <nav className="navbar navbar-expand-lg container border-bottom border-1">
             <div className="container-fluid">
-              <a className="navbar-brand text-center text-md-start text-white" href="#"><h3>Saveurior Coffee</h3></a>
+              <a className="navbar-brand text-center text-md-start text-white" href="#home"><h3>Saveurior Coffee</h3></a>
               <button onClick={burgerButtonClicked} className="navbar-toggler bg-coffee" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0 navbar">
                   <li className="nav-item me-md-5 me-0 mt-4 mb-2 mb-md-0 mt-md-0">
-                    <a className="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    <a className="nav-link active text-white" aria-current="page" href="#home">Home</a>
                   </li>
                   <li className="nav-item me-md-5 me-0 ms-md-3 ms-0 mb-2 mb-md-0 ">
-                    <a className="nav-link active text-white" aria-current="page" href="#">Menu</a>
+                    <a className="nav-link active text-white" aria-current="page" href="#story">About</a>
                   </li>
                   <li className="nav-item me-md-5 me-0 ms-md-3 ms-0 mb-2 mb-md-0 ">
-                    <a className="nav-link active text-white" aria-current="page" href="#">About</a>
+                    <a className="nav-link active text-white" aria-current="page" href="#product">Menu</a>
                   </li>
                   <li className="nav-item me-md-5 me-0 ms-md-3 ms-0 mb-2 mb-md-0">
-                    <a className="nav-link active text-white" aria-current="page" href="#">Contact</a>
+                    <a className="nav-link active text-white" aria-current="page" href="#contact">Contact</a>
                   </li>
                   <li className="nav-item mt-2 mt-md-0">
                     <form className="ms-md-5">
@@ -78,7 +81,7 @@ const LandingPage = () => {
               <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100 carousel-image" alt="..." />
             </div>
           </div>
-          <button className="carousel-control-prev d-none" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button className="carousel-control-prev d-none" style={{height: "100svh"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
@@ -88,14 +91,14 @@ const LandingPage = () => {
           </button>
         </div>
 
-        <div className="position-absolute text-center carousel-header-container">
+        <div style={{margin: "0 auto", left: "0", right: 0}} className="position-absolute text-center carousel-header-container">
           <div className="text-white fw-bold">
             <h3>Welcome</h3>
-            <h1 className=" text-uppercase custom-font">Your coffee ready to serve <br /> You want a order coffee ?</h1>
+            <h1 className=" text-uppercase custom-font">Your coffee ready to serve <br /> You want an order coffee ?</h1>
           </div>
           <div className="mt-5">
-            <button className="btn px-3 py-2 text-white rounded me-4 button-coffee">Order Now</button>
-            <button className="btn px-3 py-2 text-white rounded btn-view-menu">View Menu</button>
+            <a href='#product' className="btn px-3 py-2 text-white rounded me-4 button-coffee">Order Now</a>
+            <a href='#product' className="btn px-3 py-2 text-white rounded btn-view-menu">View Menu</a>
           </div>
         </div>
       </div>
@@ -103,7 +106,8 @@ const LandingPage = () => {
       <Story 
         title="Kenapa Harus Saveurior Coffee"
         content='Saveurior Coffee adalah pilihan utama bagi pecinta kopi yang menghargai kualitas dan rasa yang unggul. Nama "Saveurior" kami berasal dari kata "Saveur" dalam bahasa Perancis yang berarti rasa, digabung dengan akhiran "-ior" yang diambil dari kata "superior" dalam bahasa Indonesia, mencerminkan tekad kami untuk menjadi yang terbaik dalam dunia kopi. Kami berkomitmen untuk berdedikasi terhadap kualitas dalam pemilihan, pengolahan, dan penyajian kopi, kami akan memanjakan lidah Anda dengan setiap tegukan yang luar biasa.'
-        image="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image="public/images/Catalogue - 2.png"
+        position="0px -10px"
       />
 
       <TaglineLandingPage />
@@ -111,23 +115,28 @@ const LandingPage = () => {
       <Story 
         title="Dari Pangalengan ke Cangkir Anda"
         content='Kopi Saveurior berasal dari daerah Pangalengan yang mendunia akan kopi berkualitas. Kami teliti dalam pemilihan biji arabika terbaik, kemudian mengolahnya dengan metode fullwash demi mempertahankan kemurnian rasa kopi yang autentik. Kami dengan bangga menjunjung tinggi standar keaslian dengan menggunakan 100% kopi arabika murni tanpa campuran apa pun. Dengan begitu, Anda dapat merasakan kelezatan sejati kopi yang menjadi ciri khas dari daerah kami.'
-        image="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg"
+      />
+      
+      <StoryRight 
+        title="Visi Misi Saveurior Coffee"
+        content='Visi kami adalah menjadi penyedia kopi arabika berkualitas dan otentik yang bisa dinikmati oleh pecinta kopi di indonesia dan bisa memasarkan produk kami ke luar negeri. Misi kami adalah memastikan biji kopi memiliki kualitas rasa yang terjaga dan berinovasi dalam memberikan pelayanan kepada pelanggan.'
+        image="public/images/3.jpg"
       />
 
       <OurProductLandingPage />
 
-      <div className="row w-100 p-5 bg-dark text-white mt-5">
+      <TeamContainer />
+
+      <div id='contact' className="row w-100 p-5 bg-coffee mt-5">
         <div className="col-md-4 ps-md-5">
-          <p>+62 82284134328</p>
-          <p>Nomor handphone admin</p>
+          <p><i class="fa fa-phone" aria-hidden="true"></i> +628 2229 5904  40</p>
         </div>
         <div className="col-md-4 ps-md-5">
-          <p>Batam</p>
-          <p>Jl. Kenangan Gajah Mada</p>
+          <p><i class="fa fa-envelope" aria-hidden="true"></i> seveurirorcoffe@gmail.com</p>
         </div>
         <div className="col-md-4 ps-md-5">
-          <p>Open Senin - Jumat</p>
-          <p>17:00 - 23:30</p>
+          <p><i class="fa fa-instagram" aria-hidden="true"></i> saveurior.coffee</p>
         </div>
       </div>
     </section>
