@@ -106,7 +106,7 @@ const LandingPage = () => {
       <Story 
         title="Kenapa Harus Saveurior Coffee"
         content='Saveurior Coffee adalah pilihan utama bagi pecinta kopi yang menghargai kualitas dan rasa yang unggul. Nama "Saveurior" kami berasal dari kata "Saveur" dalam bahasa Perancis yang berarti rasa, digabung dengan akhiran "-ior" yang diambil dari kata "superior" dalam bahasa Indonesia, mencerminkan tekad kami untuk menjadi yang terbaik dalam dunia kopi. Kami berkomitmen untuk berdedikasi terhadap kualitas dalam pemilihan, pengolahan, dan penyajian kopi, kami akan memanjakan lidah Anda dengan setiap tegukan yang luar biasa.'
-        image="public/images/Catalogue - 2.png"
+        image="images/Catalogue - 2.png"
         position="0px -10px"
       />
 
@@ -121,7 +121,7 @@ const LandingPage = () => {
       <StoryRight 
         title="Visi Misi Saveurior Coffee"
         content='Visi kami adalah menjadi penyedia kopi arabika berkualitas dan otentik yang bisa dinikmati oleh pecinta kopi di indonesia dan bisa memasarkan produk kami ke luar negeri. Misi kami adalah memastikan biji kopi memiliki kualitas rasa yang terjaga dan berinovasi dalam memberikan pelayanan kepada pelanggan.'
-        image="public/images/3.jpg"
+        image="images/3.jpg"
       />
 
       <OurProductLandingPage />

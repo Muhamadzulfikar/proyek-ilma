@@ -14,7 +14,7 @@ const OurProductLandingPage = () => {
                 content="Biji kopi yang telah melalui proses sangrai, siap menghadirkan cita rasa yang kaya dan mendalam."
             />
             <CardLandingPage
-                image="./public/images/5.jpg"
+                image="images/5.jpg"
                 title="Kopi Arabika Bubuk"
                 content="Varian kopi yang siap seduh, memberikan kenyamanan dalam menikmati rasa kopi yang khas."
             />
