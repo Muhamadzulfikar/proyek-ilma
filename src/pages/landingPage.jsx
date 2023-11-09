@@ -6,6 +6,7 @@ import Story from '../components/landingPages/story';
 import StoryRight from '../components/landingPages/storyRight';
 import TeamContainer from '../sections/landingPages/teamContainer';
 import { Link } from 'react-router-dom';
+import Gallery from '../sections/landingPages/gallery';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -126,7 +127,7 @@ const LandingPage = () => {
 
       <OurProductLandingPage />
 
-      <TeamContainer />
+      <Gallery />
 
       <div id='contact' className="row w-100 p-5 bg-coffee mt-5">
         <div className="col-md-4 ps-md-5">
