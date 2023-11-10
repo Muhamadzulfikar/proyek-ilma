@@ -16,7 +16,7 @@ function App() {
         <Route path='admin/change-password' element={<Password />} />
         <Route path='admin/logout' element={<LogOutAccount />} />
       </Route>
-      <Route path='*' element={<h1>Page Not Found</h1>} />
+      <Route path='*' element={<img className='w-100' style={{height: "100vh"}} src="https://cdn.dribbble.com/users/3692521/screenshots/7955415/downloads/404-01.png" />} />
     </Routes>
   )
 }

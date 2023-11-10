@@ -4,8 +4,6 @@ import OurProductLandingPage from '../sections/landingPages/ourProduct';
 import TaglineLandingPage from '../sections/landingPages/tagline';
 import Story from '../components/landingPages/story';
 import StoryRight from '../components/landingPages/storyRight';
-import TeamContainer from '../sections/landingPages/teamContainer';
-import { Link } from 'react-router-dom';
 import Gallery from '../sections/landingPages/gallery';
 
 const LandingPage = () => {
@@ -134,13 +132,13 @@ const LandingPage = () => {
 
       <div id='contact' className="row w-100 p-5 bg-coffee mt-5">
         <div className="col-md-4 ps-md-5">
-          <p><i class="fa fa-phone" aria-hidden="true"></i> +628 2229 5904  40</p>
+          <p><i class="fa fa-phone" aria-hidden="true"></i>+628 2229 5902 40</p>
         </div>
         <div className="col-md-4 ps-md-5">
           <p><i class="fa fa-envelope" aria-hidden="true"></i> seveurirorcoffe@gmail.com</p>
         </div>
         <div className="col-md-4 ps-md-5">
-          <p><i class="fa fa-instagram" aria-hidden="true"></i> saveurior.coffee</p>
+          <p><img src='https://cdn.icon-icons.com/icons2/2037/PNG/512/ig_instagram_media_social_icon_124260.png' width="20px" height="20px" className='rounded me-1'/>saveurior.coffee</p>
         </div>
       </div>
     </section>
