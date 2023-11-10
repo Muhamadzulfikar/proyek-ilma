@@ -1,14 +1,23 @@
 import ImageGallery from "../../components/landingPages/imageGallery"
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Gallery = () => {
+    const [galleries, setGalleries] = useState();
+    useEffect(() => {
+        const getGalleries = async () => {
+            const response = await axios.get('https://654caa8a77200d6ba8592f20.mockapi.io/image-paths');
+            setGalleries(response.data)
+        }
+
+        getGalleries();
+    }, [])
     return (
-        <div id='galery' className="row w-100 mt-5 mt-4 ps-4 ps-md-5 ps-4">
-            <h1 className="text-center mb-3">Gallery Saveuriror</h1>
-            <ImageGallery image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg" />
-            <ImageGallery image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg" />
-            <ImageGallery image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg" />
-            <ImageGallery image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg" />
-        </div>
+        <>
+            {galleries && galleries.map((image) =>
+                <ImageGallery key={image.id} image={image.path} />
+            )}
+        </>
     )
 }
 

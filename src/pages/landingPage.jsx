@@ -82,7 +82,7 @@ const LandingPage = () => {
               <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1928&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100 carousel-image" alt="..." />
             </div>
           </div>
-          <button className="carousel-control-prev d-none" style={{height: "100svh"}} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button className="carousel-control-prev d-none" style={{ height: "100svh" }} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
@@ -92,7 +92,7 @@ const LandingPage = () => {
           </button>
         </div>
 
-        <div style={{margin: "0 auto", left: "0", right: 0}} className="position-absolute text-center carousel-header-container">
+        <div style={{ margin: "0 auto", left: "0", right: 0 }} className="position-absolute text-center carousel-header-container">
           <div className="text-white fw-bold">
             <h3>Welcome</h3>
             <h1 className=" text-uppercase custom-font">Your coffee ready to serve <br /> You want an order coffee ?</h1>
@@ -104,7 +104,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <Story 
+      <Story
         title="Kenapa Harus Saveurior Coffee"
         content='Saveurior Coffee adalah pilihan utama bagi pecinta kopi yang menghargai kualitas dan rasa yang unggul. Nama "Saveurior" kami berasal dari kata "Saveur" dalam bahasa Perancis yang berarti rasa, digabung dengan akhiran "-ior" yang diambil dari kata "superior" dalam bahasa Indonesia, mencerminkan tekad kami untuk menjadi yang terbaik dalam dunia kopi. Kami berkomitmen untuk berdedikasi terhadap kualitas dalam pemilihan, pengolahan, dan penyajian kopi, kami akan memanjakan lidah Anda dengan setiap tegukan yang luar biasa.'
         image="images/Catalogue - 2.png"
@@ -113,13 +113,13 @@ const LandingPage = () => {
 
       <TaglineLandingPage />
 
-      <Story 
+      <Story
         title="Dari Pangalengan ke Cangkir Anda"
         content='Kopi Saveurior berasal dari daerah Pangalengan yang mendunia akan kopi berkualitas. Kami teliti dalam pemilihan biji arabika terbaik, kemudian mengolahnya dengan metode fullwash demi mempertahankan kemurnian rasa kopi yang autentik. Kami dengan bangga menjunjung tinggi standar keaslian dengan menggunakan 100% kopi arabika murni tanpa campuran apa pun. Dengan begitu, Anda dapat merasakan kelezatan sejati kopi yang menjadi ciri khas dari daerah kami.'
         image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg"
       />
-      
-      <StoryRight 
+
+      <StoryRight
         title="Visi Misi Saveurior Coffee"
         content='Visi kami adalah menjadi penyedia kopi arabika berkualitas dan otentik yang bisa dinikmati oleh pecinta kopi di indonesia dan bisa memasarkan produk kami ke luar negeri. Misi kami adalah memastikan biji kopi memiliki kualitas rasa yang terjaga dan berinovasi dalam memberikan pelayanan kepada pelanggan.'
         image="images/3.jpg"
@@ -127,7 +127,10 @@ const LandingPage = () => {
 
       <OurProductLandingPage />
 
-      <Gallery />
+      <div id='gallery' className="row w-100 mt-5 mt-4 ps-4 ps-md-5 ps-4">
+        <h1 className='text-center mb-5'>Gallery Saveuriror Coffee</h1>
+        <Gallery />
+      </div>
 
       <div id='contact' className="row w-100 p-5 bg-coffee mt-5">
         <div className="col-md-4 ps-md-5">
