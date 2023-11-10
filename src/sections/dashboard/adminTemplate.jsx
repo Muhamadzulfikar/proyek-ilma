@@ -20,7 +20,7 @@ const AdminTemplate = ({ children }) => {
         const intervalId = setInterval(() => {
             localStorage.removeItem('auth');
             window.location.reload();
-        }, 3600000));
+        }, 3600000);
 
         return () => clearInterval(intervalId);
     }, [])
