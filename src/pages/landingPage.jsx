@@ -95,7 +95,7 @@ const LandingPage = () => {
         <div style={{ margin: "0 auto", left: "0", right: 0 }} className="position-absolute text-center carousel-header-container">
           <div className="text-white fw-bold">
             <h3>Welcome</h3>
-            <h1 className=" text-uppercase custom-font">Your coffee ready to serve <br /> You want an order coffee ?</h1>
+            <h1 className=" text-uppercase custom-font">Your coffee is ready to serve <br /> Do you want to order a coffee ?</h1>
           </div>
           <div className="mt-5">
             <a href='#product' className="btn px-3 py-2 text-white rounded me-4 button-coffee">Order Now</a>
@@ -105,8 +105,8 @@ const LandingPage = () => {
       </div>
 
       <Story
-        title="Kenapa Harus Saveurior Coffee"
-        content='Saveurior Coffee adalah pilihan utama bagi pecinta kopi yang menghargai kualitas dan rasa yang unggul. Nama "Saveurior" kami berasal dari kata "Saveur" dalam bahasa Perancis yang berarti rasa, digabung dengan akhiran "-ior" yang diambil dari kata "superior" dalam bahasa Indonesia, mencerminkan tekad kami untuk menjadi yang terbaik dalam dunia kopi. Kami berkomitmen untuk berdedikasi terhadap kualitas dalam pemilihan, pengolahan, dan penyajian kopi, kami akan memanjakan lidah Anda dengan setiap tegukan yang luar biasa.'
+        title="Why Saveurior Coffee"
+        content='Saveurior Coffee is the ultimate choice for coffee lovers who value superior quality and flavour. Our name "Saveurior" comes from the French word "Saveur" meaning flavour, combined with the suffix "-ior" taken from the Indonesian word "superior", reflecting our determination to be the best in the world of coffee. We are committed to dedication to quality in the selection, processing, and serving of coffee, we will indulge your taste buds with every exceptional sip.'
         image="images/Catalogue - 2.png"
         position="0px -10px"
       />
@@ -114,14 +114,14 @@ const LandingPage = () => {
       <TaglineLandingPage />
 
       <Story
-        title="Dari Pangalengan ke Cangkir Anda"
-        content='Kopi Saveurior berasal dari daerah Pangalengan yang mendunia akan kopi berkualitas. Kami teliti dalam pemilihan biji arabika terbaik, kemudian mengolahnya dengan metode fullwash demi mempertahankan kemurnian rasa kopi yang autentik. Kami dengan bangga menjunjung tinggi standar keaslian dengan menggunakan 100% kopi arabika murni tanpa campuran apa pun. Dengan begitu, Anda dapat merasakan kelezatan sejati kopi yang menjadi ciri khas dari daerah kami.'
+        title="From Pangalengan to Your Cup"
+        content='Saveurior coffee comes from the Pangalengan area which is known worldwide for its quality coffee. We carefully select the best arabica beans, then process them using the fullwash method to maintain the purity of the authentic coffee flavour. We proudly uphold the standard of authenticity by using 100% pure arabica coffee without any blends. That way, you can experience the true delicacy of coffee that characterises our region.'
         image="https://majalah.ottencoffee.co.id/wp-content/uploads/2016/03/guatemala-central-ame_moor-3.jpg"
       />
 
       <StoryRight
-        title="Visi Misi Saveurior Coffee"
-        content='Visi kami adalah menjadi penyedia kopi arabika berkualitas dan otentik yang bisa dinikmati oleh pecinta kopi di indonesia dan bisa memasarkan produk kami ke luar negeri. Misi kami adalah memastikan biji kopi memiliki kualitas rasa yang terjaga dan berinovasi dalam memberikan pelayanan kepada pelanggan.'
+        title="Saveurior Coffee Vision and Mission"
+        content='Our vision is to be a provider of quality and authentic arabica coffee that can be enjoyed by coffee lovers in Indonesia and can market our products abroad. Our mission is to ensure that the coffee beans have a quality flavour and innovate in providing services to customers.'
         image="images/3.jpg"
       />
 

@@ -6,18 +6,17 @@ const TaglineLandingPage = () => {
             <TaglineContentLandingPage
                 icon="fa fa-shopping-cart"
                 title="Easy To Order"
-                content="Produk kami sangat mudah untuk dipesan. Ayo tunggu apa lagi, klik pesan sekarang. Kepuasan Terjamin"
+                content="Our products are very easy to order. What are you waiting for, click order now. Satisfaction Guaranteed"
             />
             <TaglineContentLandingPage
                 icon="fa fa-paper-plane"
                 title="Fast Delivery"
-                content="
-                Dengan teknologi mutakhir kami, pesanan Anda segera diproses setelah pembayaran dan dikirimkan ke rumah Anda"
+                content="With our cutting-edge technology, your order is processed immediately after payment and delivered to your home"
             />
             <TaglineContentLandingPage
                 icon="fa fa-coffee"
                 title="Quality Coffee"
-                content="Kami selalu menjaga kualitas dan rasa coffee kami agar terjaga saat sampai di rumah Anda"
+                content="We always maintain the quality and flavour of our coffee so that it is preserved when it reaches your home."
             />
         </div>
     )

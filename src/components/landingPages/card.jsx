@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom"
 
-const CardLandingPage = ({ image, title, content }) => {
+const CardLandingPage = ({ image, title, content, price}) => {
     return (
         <div className="col-md-6 col-lg-4 rounded">
-            <div className="card bg-dark text-white p-0 pb-3 shadow mb-5" style={{ border: 0, textAlign: "left", height: "430px" }}>
+            <div className="card bg-dark text-white p-0 pb-3 shadow mb-5" style={{ border: 0, textAlign: "left", height: "520px" }}>
                 <img style={{ height: "200px" }} src={image} className="card-img-top" alt="..." />
                 <div className="card-body p-4">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text" style={{height:"80px"}}>{content}</p>
+                    <p className="card-text">{price}</p>
                     <Link to={'https://wa.me/+6282229590440?text=Hallo%20saya%20ingin%20membeli%20produk%20' + title + '%20apakah%20produk%20masih%20tersedia?'} className='btn button-coffee mt-3'>Order Now</Link>
                 </div>
             </div>
