@@ -9,13 +9,20 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Children } from 'react';
 
-const AdminTemplate = ({children}) => {
+const AdminTemplate = ({ children }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
         if (localStorage.getItem('auth') != 1) {
             navigate('/admin/login');
         }
+
+        const intervalId = setInterval(() => {
+            localStorage.removeItem('auth');
+            window.location.reload();
+        }, 3600000));
+
+        return () => clearInterval(intervalId);
     }, [])
 
     return (
@@ -42,11 +49,11 @@ const AdminTemplate = ({children}) => {
                     </Drawer>
                 </div>
                 <div className="col-10 pt-5">
-                {Children.map(children, child =>
-                    <div>
-                         {child}
-                    </div>
-                )}
+                    {Children.map(children, child =>
+                        <div>
+                            {child}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
